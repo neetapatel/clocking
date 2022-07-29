@@ -9,7 +9,7 @@ function setTime() { // onclick
   document.getElementById("out-btn").style.backgroundColor = "white";
   clearInterval(interval_normal);
   clearInterval(interval_2x);
-  interval_normal = setInterval(increment, 1200);
+  interval_normal = setInterval(increment, 1500);
 }
 
 function clockOut() {

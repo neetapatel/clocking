@@ -7,7 +7,7 @@ html {
     background-color: black;
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 7em;
+    font-size: 10em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,12 +41,14 @@ button:hover {
 #adorno {
     font-size: 0.2em;
     text-align: center;
-    width: 75%;
+    width: 60%;
     line-height: 120%;
     color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .button-container {
-    margin-bottom: 60px;
+    margin-bottom: 90px;
     height: auto;
 }
