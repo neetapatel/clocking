@@ -5,12 +5,16 @@ var secs = 0;
 var interval_normal, interval_2x;
 
 function setTime() { // onclick
+  document.getElementById("start-btn").style.backgroundColor = "grey";
+  document.getElementById("out-btn").style.backgroundColor = "white";
   clearInterval(interval_normal);
   clearInterval(interval_2x);
-  interval_normal = setInterval(increment, 1000);
+  interval_normal = setInterval(increment, 1200);
 }
 
 function clockOut() {
+  document.getElementById("start-btn").style.backgroundColor = "white";
+  document.getElementById("out-btn").style.backgroundColor = "grey";
   clearInterval(interval_normal);
   clearInterval(interval_2x);
   interval_2x = setInterval(increment, 10);
@@ -32,3 +36,8 @@ function increment() {
   }
   document.getElementById("txt").innerHTML = hrs + ":" + mins + ":" + secs;
 }
+
+// const currentDate = new Date();
+// const time = currentDate.getTime();
+// console.log(time);
+// document.getElementById("timestamp").innerHTML = time;
