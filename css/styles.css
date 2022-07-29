@@ -6,7 +6,7 @@
 html {
     background-color: black;
     color: white;
-    font-family: Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 5em;
     display: flex;
     justify-content: center;
@@ -24,13 +24,15 @@ html {
 button {
     padding: 10px;
     border-style: solid;
+    border-width: 1px;
     border-color: white;
     border-radius: 20px;
-    font-family: Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     background-color: black;
     color: white;
     text-transform: uppercase;
     font-weight: 700;
+    letter-spacing: 1px;
 }
 
 button:hover {

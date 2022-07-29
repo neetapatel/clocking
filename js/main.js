@@ -1,4 +1,5 @@
 var totalSecs = 0;
+var hrs = 0;
 var mins = 0;
 var secs = 0;
 var interval_normal, interval_2x;
@@ -12,12 +13,16 @@ function setTime() { // onclick
 function clockOut() {
   clearInterval(interval_normal);
   clearInterval(interval_2x);
-  interval_2x = setInterval(increment, 500);
+  interval_2x = setInterval(increment, 10);
 }
 
 function increment() {
   totalSecs++;
-  mins = Math.floor(totalSecs / 60);
+  hrs = Math.floor((totalSecs / 3600) % 60);
+  if (hrs <= 9) {
+    hrs = "0" + hrs;
+  }
+  mins = Math.floor((totalSecs / 60) % 60);
   if (mins <= 9) {
     mins = "0" + mins;
   }
@@ -25,5 +30,5 @@ function increment() {
   if (secs <= 9) { 
     secs = "0" + secs; 
   }
-  document.getElementById("txt").innerHTML = mins + ":" + secs;
+  document.getElementById("txt").innerHTML = hrs + ":" + mins + ":" + secs;
 }
