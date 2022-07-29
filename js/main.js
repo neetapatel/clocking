@@ -15,6 +15,7 @@ function setTime() { // onclick
 function clockOut() {
   document.getElementById("start-btn").style.backgroundColor = "white";
   document.getElementById("out-btn").style.backgroundColor = "grey";
+  document.getElementById("adorno").style.color = "white";
   clearInterval(interval_normal);
   clearInterval(interval_2x);
   interval_2x = setInterval(increment, 10);
@@ -36,8 +37,3 @@ function increment() {
   }
   document.getElementById("txt").innerHTML = hrs + ":" + mins + ":" + secs;
 }
-
-// const currentDate = new Date();
-// const time = currentDate.getTime();
-// console.log(time);
-// document.getElementById("timestamp").innerHTML = time;
